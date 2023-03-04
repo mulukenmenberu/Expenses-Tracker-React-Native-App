@@ -18,41 +18,41 @@ export default function Expenses({ navigation }) {
 
     return (
         <View style={styles.container}>
-            
-<Modal 
-transparant={true}
-visible={showmodal}>
-<View style={{flex:1,backgroundColor:'#000000aa', justifyContent:'center'}}>
-<View style={{margin:50, padding:40, backgroundColor:'#ffffff',  borderRadius:20}}>
-<Text style={{position:'absolute', top:10, fontSize:20, alignSelf:'center'}}>Add New Expenses</Text>
-<View
-  style={{
-    borderBottomColor: 'black',
-    borderBottomWidth: "1%",
-    marginTop:10,
-    marginBottom:10
-  }}
-/>
 
-<Text>Date:</Text>
-{/* <DatePicker date={date} onDateChange={setDate}/> */}
-<Text>Expense Amount:</Text>
-<Text>Expense Description:</Text>
-<Text>Link to Family Member:</Text>
-<View
-  style={{
-    borderBottomColor: 'black',
-    borderBottomWidth: "0%",
-    marginTop:10,
-    marginBottom:10
-  }}
-/>
-<TouchableOpacity style={{borderRadius:10,width:140,height:30, backgroundColor:COLOR_CODES.buttonColor, position:'absolute', bottom:10, alignSelf:'center'}} onPress={()=>setShowModal(false)}>
-    <Text style={{color:'#fff', fontSize:18, alignSelf:'center'}}>Save & Close</Text>
-</TouchableOpacity>
-</View>
-</View>
-</Modal>
+            <Modal
+                transparant={true}
+                visible={showmodal}>
+                <View style={{ flex: 1, backgroundColor: '#000000aa', justifyContent: 'center' }}>
+                    <View style={{ margin: 50, padding: 40, backgroundColor: '#ffffff', borderRadius: 20 }}>
+                        <Text style={{ position: 'absolute', top: 10, fontSize: 20, alignSelf: 'center' }}>Add New Expenses</Text>
+                        <View
+                            style={{
+                                borderBottomColor: 'black',
+                                borderBottomWidth: "1%",
+                                marginTop: 10,
+                                marginBottom: 10
+                            }}
+                        />
+
+                        <Text>Date:</Text>
+                        {/* <DatePicker date={date} onDateChange={setDate}/> */}
+                        <Text>Expense Amount:</Text>
+                        <Text>Expense Description:</Text>
+                        <Text>Link to Family Member:</Text>
+                        <View
+                            style={{
+                                borderBottomColor: 'black',
+                                borderBottomWidth: "0%",
+                                marginTop: 10,
+                                marginBottom: 10
+                            }}
+                        />
+                        <TouchableOpacity style={{ borderRadius: 10, width: 140, height: 30, backgroundColor: COLOR_CODES.buttonColor, position: 'absolute', bottom: 10, alignSelf: 'center' }} onPress={() => setShowModal(false)}>
+                            <Text style={{ color: '#fff', fontSize: 18, alignSelf: 'center' }}>Save & Close</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </Modal>
             <View style={styles.container}>
                 <TouchableOpacity style={{
                     marginTop: 20,
@@ -170,7 +170,7 @@ visible={showmodal}>
                             marginVertical: 8,
                         }}
                     />
-                      <Text style={{ marginLeft: 20, marginTop: 20 }}>Expense by Expense Item</Text>
+                    <Text style={{ marginLeft: 20, marginTop: 20 }}>Expense by Expense Item</Text>
                     <LineChart
                         data={{
                             labels: ["School Fee", "Food", "Telecom", "Fuel", "Other"],
@@ -212,38 +212,38 @@ visible={showmodal}>
                             marginVertical: 8,
                         }}
                     />
-<View style={{flexDirection:'row',justifyContent:'space-between'}}>
-                      <Text style={{ marginLeft: 20, marginTop: 20 }}>Expense List</Text>
-                      <Text style={{fontWeight:'bold',marginRight: 20, marginTop: 20,color:COLOR_CODES.mainColor}} onPress={()=>setShowModal(true)}> + Add Expense</Text>
-                      </View>
-                      <DataTable>
-    <DataTable.Header>
-      <DataTable.Title>Type</DataTable.Title>
-      <DataTable.Title>Date</DataTable.Title>
-      <DataTable.Title numeric>Price</DataTable.Title>
-    </DataTable.Header>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <Text style={{ marginLeft: 20, marginTop: 20 }}>Expense List</Text>
+                        <Text style={{ fontWeight: 'bold', marginRight: 20, marginTop: 20, color: COLOR_CODES.mainColor }} onPress={() => setShowModal(true)}> + Add Expense</Text>
+                    </View>
+                    <DataTable>
+                        <DataTable.Header>
+                            <DataTable.Title>Type</DataTable.Title>
+                            <DataTable.Title>Date</DataTable.Title>
+                            <DataTable.Title numeric>Price</DataTable.Title>
+                        </DataTable.Header>
 
-    <DataTable.Row>
-      <DataTable.Cell>Food</DataTable.Cell>
-      <DataTable.Cell>2023-03-01</DataTable.Cell>
-      <DataTable.Cell numeric>$ 6.0</DataTable.Cell>
-    </DataTable.Row>
+                        <DataTable.Row>
+                            <DataTable.Cell>Food</DataTable.Cell>
+                            <DataTable.Cell>2023-03-01</DataTable.Cell>
+                            <DataTable.Cell numeric>$ 6.0</DataTable.Cell>
+                        </DataTable.Row>
 
-    <DataTable.Row>
-      <DataTable.Cell>School Fee</DataTable.Cell>
-      <DataTable.Cell >2023-03-01</DataTable.Cell>
-      <DataTable.Cell numeric>$ 108.0</DataTable.Cell>
-    </DataTable.Row>
+                        <DataTable.Row>
+                            <DataTable.Cell>School Fee</DataTable.Cell>
+                            <DataTable.Cell >2023-03-01</DataTable.Cell>
+                            <DataTable.Cell numeric>$ 108.0</DataTable.Cell>
+                        </DataTable.Row>
 
-    <DataTable.Pagination
-      page={1}
-      numberOfPages={3}
-      onPageChange={page => {
-        console.log(page);
-      }}
-      label="1-2 of 2"
-    />
-  </DataTable>
+                        <DataTable.Pagination
+                            page={1}
+                            numberOfPages={3}
+                            onPageChange={page => {
+                                console.log(page);
+                            }}
+                            label="1-2 of 2"
+                        />
+                    </DataTable>
                 </Card>
 
 
@@ -258,6 +258,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: COLOR_CODES.mainColor,
         alignItems: 'center',
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20
     },
     activeCard: {
         margin: 10,

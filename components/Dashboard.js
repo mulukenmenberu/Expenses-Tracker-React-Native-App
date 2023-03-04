@@ -101,7 +101,7 @@ const Dashboard = () => {
                 actions={actions}
                 onPressItem={name => {
                     
-                    setHeaderMessage()
+                    // setHeaderMessage()
                     setActivePage(name)
                 }}
             />

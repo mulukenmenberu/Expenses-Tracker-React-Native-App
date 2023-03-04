@@ -48,7 +48,7 @@ const Settings = () => {
       </Card>
       <Text style={{ fontSize: 20,paddingLeft:10,paddingBottom:10, paddingTop:10 }}>My Account</Text>
       <Card style={{paddingTop:10}}>
-        <View style={{   paddingLeft:10, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <View style={{   paddingLeft:10, marginTop:15,flexDirection: 'row', justifyContent: 'space-between' }}>
           <Text >Show Notification quota reachs limit</Text>
           <Switch
 
@@ -61,21 +61,8 @@ const Settings = () => {
 
           />
         </View>
-        <View style={{  paddingLeft:10, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <View style={{  paddingLeft:10,  marginTop:15,flexDirection: 'row', justifyContent: 'space-between' }}>
           <Text >Enable Quota percentage</Text>
-          <Switch
-
-
-            trackColor={{ false: '#767577', true: COLOR_CODES.mainColor }}
-            thumbColor={isActiveDaily ? COLOR_CODES.buttonColor : '#f4f3f4'}
-            ios_backgroundColor="#3e3e3e"
-            value={isActiveDaily}
-            onValueChange={toggleSwitchDaily}
-
-          />
-        </View>
-        <View style={{  paddingLeft:10, flexDirection: 'row', justifyContent: 'space-between' }}>
-          <Text >Email me daily usage</Text>
           <Switch
 
 
@@ -83,6 +70,19 @@ const Settings = () => {
             thumbColor={isActiveEmail ? COLOR_CODES.buttonColor : '#f4f3f4'}
             ios_backgroundColor="#3e3e3e"
             value={isActiveEmail}
+            onValueChange={toggleSwitchDaily}
+
+          />
+        </View>
+        <View style={{  paddingLeft:10,  marginTop:15,flexDirection: 'row', justifyContent: 'space-between' }}>
+          <Text >Email me daily usage</Text>
+          <Switch
+
+
+            trackColor={{ false: '#767577', true: COLOR_CODES.mainColor }}
+            thumbColor={isActiveDaily ? COLOR_CODES.buttonColor : '#f4f3f4'}
+            ios_backgroundColor="#3e3e3e"
+            value={isActiveDaily}
             onValueChange={toggleSwitchEmail}
 
           />

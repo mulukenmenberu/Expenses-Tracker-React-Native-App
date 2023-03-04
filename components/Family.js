@@ -52,19 +52,21 @@ export default function Family({ navigation }) {
       </View>
       <ScrollView>
         <View>
-          <Card style={{ height: 150, marginTop: 10, backgroundColor: 'red' }}>
+          <Card style={{ height: 150, marginTop: 10, backgroundColor: '#9FE2BF' }}>
+<View>
+  
+</View>
+          </Card>
+          <Card style={{ height: 150, marginTop: 10, backgroundColor: '#9FE2BF' }}>
 
           </Card>
-          <Card style={{ height: 150, marginTop: 10, backgroundColor: 'red' }}>
+          <Card style={{ height: 150, marginTop: 10, backgroundColor: '#9FE2BF' }}>
 
           </Card>
-          <Card style={{ height: 150, marginTop: 10, backgroundColor: 'red' }}>
+          <Card style={{ height: 150, marginTop: 10, backgroundColor: '#9FE2BF' }}>
 
           </Card>
-          <Card style={{ height: 150, marginTop: 10, backgroundColor: 'red' }}>
-
-          </Card>
-          <Card style={{ height: 150, marginTop: 10, backgroundColor: 'red' }}>
+          <Card style={{ height: 150, marginTop: 10, backgroundColor: '#9FE2BF' }}>
 
           </Card>
         </View>
